@@ -1,4 +1,5 @@
-def main():
-    print("Hello, World!")
+from fastapi import FastAPI
+from app.api.routes import router
 
-main()
+app = FastAPI()
+app.include_router(router)
